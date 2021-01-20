@@ -14,19 +14,25 @@ def buscahomopolimeros(dna):
                     comprimento += 1
                 else:
                     if comprimento > 2:
-                        lista_homopolimero.append((ultimo_nt, comprimento, index_inicio))
+                        lista_homopolimero.append((ultimo_nt, comprimento, index_inicio+1))
                     ultimo_nt = nt
                     index_inicio = indice
                     comprimento = 1
             else:
                 raise TypeError
         if comprimento > 2:
-            lista_homopolimero.append((ultimo_nt, comprimento, index_inicio))
-        print(lista_homopolimero)
+            lista_homopolimero.append((ultimo_nt, comprimento, index_inicio+1))
+        if lista_homopolimero == []:
+            print("Não há homopolimeros")
+        else:
+            print(lista_homopolimero)
+
     except:
         print("A sequência inserida é inválida")
 
 
-buscahomopolimeros("ATAGCAGCTTTTG")
+buscahomopolimeros("ATAGCAGCTTTT")
 buscahomopolimeros('')
 buscahomopolimeros('aloATTTC')
+buscahomopolimeros('ACTTTTGTCTAAACCCCCCGTCCTATATATAACT')
+buscahomopolimeros("atcgtga")
