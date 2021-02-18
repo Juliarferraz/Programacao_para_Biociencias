@@ -19,12 +19,16 @@ def valor_maximo(filename: str, coluna: int):
         arquivo = csv.reader(arquivo_csv, delimiter=delimitador)
         arquivo.__next__()  # Pula a primeira linha, que é o cabeçalho
         for row in arquivo:
-            valor = float(row[coluna - 1])
-            if valor > maximo:
-                maximo = valor
-            else:
-                pass
-    print("máximo Total_recovered = {}" .format(maximo))
+            try:
+                valor = float(row[coluna - 1])
+                if valor > maximo:
+                    maximo = valor
+                else:
+                    pass
+            except ValueError:
+                print("a coluna selecionada não contém dados válidos")
+                return None
+    print("máximo = {}" .format(maximo))
 
 # Printa a média dos valores encontrados no arquivo "filename" na coluna "coluna"
 # (str, int) --> None
@@ -39,11 +43,17 @@ def media(filename: str, coluna: int):
         arquivo = csv.reader(arquivo_csv, delimiter=delimitador)
         arquivo.__next__()              # Pula a primeira linha, que é o cabeçalho
         for row in arquivo:
-            valor = float(row[coluna - 1])
-            float('16,94'.replace(',', '.'))
-            soma += valor
-            numeros_lidos += 1
-    print("média Total_cases = {}" .format(soma / numeros_lidos ))
+            try:
+                valor = float(row[coluna - 1])
+                soma += valor
+                numeros_lidos += 1
+            except ValueError:
+                print("a coluna selecionada não contém dados válidos")
+                break
+    try:
+        print("média = {}" .format(soma / numeros_lidos ))
+    except ZeroDivisionError:
+        print("Não é possível dividir por zero")
 
 # Printa o valor mínimo encontrado no arquivo "filename" na coluna "coluna"
 # (str, int) --> None
@@ -57,12 +67,16 @@ def valor_minimo(filename: str, coluna: int):
         arquivo = csv.reader(arquivo_csv, delimiter=delimitador)
         arquivo.__next__()  # Pula a primeira linha, que é o cabeçalho
         for row in arquivo:
-            valor = float((row[coluna - 1]))
-            if valor < minimo:
-                minimo = valor
-            else:
-                pass
-    print("mínimo Total_deaths = {}" .format(minimo))
+            try:
+                valor = float(row[coluna - 1])
+                if valor < minimo:
+                    minimo = valor
+                else:
+                    pass
+            except ValueError:
+                print("a coluna selecionada não contém dados válidos")
+                return None
+    print("mínimo = {}" .format(minimo))
 
 # Printa a razao entre os valores encontrados nas colunas 1 e 2
 # (str, int) --> None
@@ -70,7 +84,6 @@ def razao(filename: str, identificador: int, coluna1: int, coluna2: int):
     identificador -= 1
     coluna1 -= 1
     coluna2 -= 1
-    print("Country	 Total_cases/Total_deaths")
     with open(filename, "r") as arquivo_csv:
         if filename[-3:].lower() == "csv":
             delimitador = ","
@@ -79,5 +92,11 @@ def razao(filename: str, identificador: int, coluna1: int, coluna2: int):
         arquivo = csv.reader(arquivo_csv, delimiter=delimitador)
         arquivo.__next__()                             # Pula a primeira linha, que é o cabeçalho
         for row in arquivo:
-            razao = float(row[coluna1])  /  float(row[coluna2])
-            print(row[identificador] + "\t{}".format(razao) )
+            try:
+                razao = float(row[coluna1])  /  float(row[coluna2])
+                print(row[identificador] + "\t{}".format(razao) )
+            except ZeroDivisionError:
+                print("Não é possivel dividir por zero, essa razão não é válida")
+            except ValueError:
+                print("a coluna selecionada não contém dados válidos")
+                break

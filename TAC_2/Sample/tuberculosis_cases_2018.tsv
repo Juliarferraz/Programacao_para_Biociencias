@@ -2,16 +2,16 @@ Country	Population_per_1000s	TB deaths
 Afghanistan	30552	13000
 Albania	3173	20
 Algeria	39208	5100
-Andorra	79	0,26
+Andorra	79	0.26
 Angola	21472	6900
-Antigua and Barbuda	90	1,2
+Antigua and Barbuda	90	1.2
 Argentina	41446	570
 Armenia	2977	170
 Australia	23343	45
 Austria	8495	29
 Azerbaijan	9413	360
-Bahamas	377	1,8
-Bahrain	1332	9,6
+Bahamas	377	1.8
+Bahrain	1332	9.6
 Bangladesh	156595	80000
 Barbados	285	2
 Belarus	9357	850
@@ -39,17 +39,17 @@ China	1393337	41000
 Colombia	48321	770
 Comoros	735	58
 Congo	4448	2000
-Cook Islands	21	0,41
+Cook Islands	21	0.41
 Costa Rica	4872	33
 Croatia	4290	52
 Cuba	11266	37
-Cyprus	1141	2,3
+Cyprus	1141	2.3
 Czech Republic	10702	28
 Democratic People's Republic of Korea	24895	6700
 Democratic Republic of the Congo	67514	46000
 Denmark	5619	24
 Djibouti	873	870
-Dominica	72	2,7
+Dominica	72	2.7
 Dominican Republic	10404	590
 Ecuador	15738	320
 Egypt	82056	550
@@ -67,7 +67,7 @@ Georgia	4341	310
 Germany	82727	300
 Ghana	25905	1100
 Greece	11128	77
-Grenada	106	1,1
+Grenada	106	1.1
 Guatemala	15468	250
 Guinea	11745	3200
 Guinea-Bissau	1704	1200
@@ -75,7 +75,7 @@ Guyana	800	130
 Haiti	10317	2700
 Honduras	8098	230
 Hungary	9955	81
-Iceland	330	0,93
+Iceland	330	0.93
 India	1252140	240000
 Indonesia	249866	64000
 Iran (Islamic Republic of)	77447	2500
@@ -98,37 +98,37 @@ Lesotho	2074	960
 Liberia	4294	2100
 Libya	6202	540
 Lithuania	3017	250
-Luxembourg	530	2,2
+Luxembourg	530	2.2
 Madagascar	22925	12000
 Malawi	16363	1500
 Malaysia	29717	1700
-Maldives	345	7,6
+Maldives	345	7.6
 Mali	15302	1600
-Malta	429	1,5
+Malta	429	1.5
 Marshall Islands	53	21
 Mauritania	3890	1000
 Mauritius	1244	15
 Mexico	122332	2200
 Micronesia (Federated States of)	104	22
-Monaco	38	0,03
+Monaco	38	0.03
 Mongolia	2839	140
-Montenegro	621	1,2
+Montenegro	621	1.2
 Morocco	33008	2800
 Mozambique	25834	18000
 Myanmar	53259	26000
 Namibia	2303	1300
-Nauru	10	0,67
+Nauru	10	0.67
 Nepal	27797	4600
 Netherlands	16759	20
-New Zealand	4506	6,3
+New Zealand	4506	6.3
 Nicaragua	6080	160
 Niger	17831	3100
 Nigeria	173615	160000
-Niue	1	0,01
-Norway	5043	4,4
+Niue	1	0.01
+Norway	5043	4.4
 Oman	3632	25
 Pakistan	182143	49000
-Palau	21	0,36
+Palau	21	0.36
 Panama	3864	180
 Papua New Guinea	7321	2400
 Paraguay	6802	200
@@ -136,22 +136,22 @@ Peru	30376	2300
 Philippines	98394	27000
 Poland	38217	650
 Portugal	10608	140
-Qatar	2169	2,7
+Qatar	2169	2.7
 Republic of Korea	49263	2600
 Republic of Moldova	3487	480
 Romania	21699	1200
 Russian Federation	142834	17000
 Rwanda	11777	810
-Saint Kitts and Nevis	54	1,6
-Saint Lucia	182	2,2
-Saint Vincent and the Grenadines	109	3,1
-Samoa	190	6,1
+Saint Kitts and Nevis	54	1.6
+Saint Lucia	182	2.2
+Saint Vincent and the Grenadines	109	3.1
+Samoa	190	6.1
 San Marino	31	0
 Sao Tome and Principe	193	18
 Saudi Arabia	28829	960
 Senegal	14133	2900
 Serbia	9511	150
-Seychelles	93	1,4
+Seychelles	93	1.4
 Sierra Leone	6092	2600
 Singapore	5412	94
 Slovakia	5450	35
@@ -173,12 +173,12 @@ Thailand	67010	8100
 The former Yugoslav republic of Macedonia	2107	33
 Timor-Leste	1133	990
 Togo	6817	810
-Tonga	105	2,5
+Tonga	105	2.5
 Trinidad and Tobago	1341	29
 Tunisia	10997	230
 Turkey	74933	310
 Turkmenistan	5240	1300
-Tuvalu	10	2,8
+Tuvalu	10	2.8
 Uganda	37579	4100
 Ukraine	45239	6600
 United Arab Emirates	9346	64
