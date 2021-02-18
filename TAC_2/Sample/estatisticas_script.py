@@ -1,3 +1,10 @@
+"""
+autora: Julia Ferraz
+data: 17/02/2021
+versão: 1
+"""
+
+### importações de bibliotecas internas do Python.
 import csv
 
 # Printa o valor máximo encontrado no arquivo "filename" na coluna "coluna"
@@ -50,7 +57,7 @@ def valor_minimo(filename: str, coluna: int):
         arquivo = csv.reader(arquivo_csv, delimiter=delimitador)
         arquivo.__next__()  # Pula a primeira linha, que é o cabeçalho
         for row in arquivo:
-            valor = float(row[coluna - 1])
+            valor = float((row[coluna - 1]))
             if valor < minimo:
                 minimo = valor
             else:

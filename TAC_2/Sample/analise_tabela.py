@@ -1,5 +1,14 @@
+"""
+autora: Julia Ferraz
+data: 17/02/2021
+versão: 1
+"""
+
+### importações de bibliotecas internas do Python.
 import sys
-from estatisticas_script import *
+
+### importações de seus próprios módulos e pacotes
+from estatisticas_script import valor_maximo,media,valor_minimo,razao
 
 nome_do_arquivo = sys.argv[1]
 
