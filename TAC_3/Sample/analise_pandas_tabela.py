@@ -6,7 +6,6 @@ versão: 1
 
 # importações de bibliotecas internas do Python
 import sys
-# importações de bibliotecas externas do Python
 # importações de seus próprios módulos e pacotes
 from estatisticas_pandas_script import *
 

@@ -4,10 +4,8 @@ data: 20/02/2021
 versão: 1
 """
 
-### importações de bibliotecas internas do Python.
 ### importações de bibliotecas externas do Python
 import pandas
-import xlrd
 
 def valor_max(filename:str, coluna:str):
     arquivo_excel = pandas.read_excel(filename)
@@ -36,8 +34,6 @@ def topx(filename:str, x: int):
     arquivo_excel = pandas.read_excel(filename)
     ordem_decrescente_x = arquivo_excel.sort_values(by=['Total_cases'], ascending=False) #para tornar em ordem decrescente ascending= False
     # printar sem o index (primeira coluna que indica os números das linhas).
-    # a função .to_string transforma a váriavel tabular em strings e retira a indexação.
-    #print(ordem_decrescente_x.to_string(index=False))
     print(ordem_decrescente_x.iloc[:x].to_string(index = False),'\t\t')
 
 def cria_coluna(filename):
