@@ -51,7 +51,7 @@ def topx(filename:str, x: int, coluna ):
     #print(ordem_decrescente_x.to_string(index=False))
     print(ordem_decrescente_x)
 
-def cria_coluna(filename:str):
+def cria_coluna(filename):
     #criar coluna chamada “Total_cases_per_100mil”
     # normalização por 100.000 habitantes.
     arquivo_excel = pandas.read_excel(filename)

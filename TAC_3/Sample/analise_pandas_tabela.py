@@ -24,6 +24,7 @@ def main():
     soma_total(nome_do_arquivo, soma_total_coluna)
     coluna_e_x = input("Digite o numero da coluna que voce deseja e o valor de x")
     topx(nome_do_arquivo, int(coluna_e_x[2]),(coluna_e_x[1]))
+    cria_coluna(nome_do_arquivo)
 
 if __name__ == "__main__":
     main()
