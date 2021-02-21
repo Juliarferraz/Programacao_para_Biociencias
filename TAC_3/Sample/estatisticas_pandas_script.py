@@ -17,7 +17,7 @@ versão: 1
 ### importações de bibliotecas internas do Python.
 ### importações de bibliotecas externas do Python
 import pandas
-import xlrd
+
 ##para delet
 
 def valor_max(filename:str, coluna):
@@ -34,22 +34,22 @@ def valor_min(filename:str, coluna):
 def media(filename:str, coluna):
     arquivo_excel = pandas.read_excel(filename, header= None)
     coluna_media = arquivo_excel[coluna]
-    média = coluna_media.mean()
-    print("Média:",média)
+    media = coluna_media.mean()
+    print("Média:",media)
 
-def soma_total(filename:str,coluna ):
+def soma_total(filename:str, coluna):
     arquivo_excel = pandas.read_excel(filename,index = False, header= None)
     coluna_soma = arquivo_excel[coluna]
     soma_coluna = coluna_soma.sum()
     print(soma_coluna)
 
-def topx(filename:str, x: int, coluna ):
+def topx(filename:str, x: int, coluna):
     arquivo_excel = pandas.read_excel(filename)
-    ordem_decrescente_x = arquivo_excel.sort_values(index= [:x],coluna, ascending=False) #para tornar em ordem decrescente ascending= False
+    ordem_decrescente_x = arquivo_excel.sort_values(coluna, ascending=False) #para tornar em ordem decrescente ascending= False
     # printar sem o index (primeira coluna que indica os números das linhas).
     # a função .to_string transforma a váriavel tabular em strings e retira a indexação.
     #print(ordem_decrescente_x.to_string(index=False))
-    print(ordem_decrescente_x)
+    print(coluna[:x])
 
 def cria_coluna(filename):
     #criar coluna chamada “Total_cases_per_100mil”
