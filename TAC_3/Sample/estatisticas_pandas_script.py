@@ -17,22 +17,35 @@ versão: 1
 ### importações de bibliotecas internas do Python.
 ### importações de bibliotecas externas do Python
 import pandas
+##para delet
 
-"""
-def valor_max(filename:str,):
-    arquivo_excel = pandas.read_excel(filename)
+def valor_max(filename:str, coluna):
+    arquivo_excel = pandas.read_excel(filename,index = False, header= None)
+    coluna_max = arquivo_excel[coluna]
+    max_value = coluna_max.max()
+    print(max_value)
+def valor_min(filename:str, coluna):
+    arquivo_excel = pandas.read_excel(filename,index = False, header= None)
+    coluna_min = arquivo_excel[coluna]
+    min_value = coluna_min.max()
+    print(min_value)
+    
+def media(filename:str, coluna):
+    arquivo_excel = pandas.read_excel(filename, header= None)
+    coluna_media = arquivo_excel[coluna]
+    média = coluna_media.mean()
+    print("Média:",média)
 
-def valor_min():
-    arquivo_excel = pandas.read_excel(filename)
-def media():
-    arquivo_excel = pandas.read_excel(filename)
-"""
-def soma_total(filename:str,coluna:int ):
-    arquivo_excel = pandas.read_excel(filename)
-    soma_coluna = arquivo_excel[coluna].sum()
+def soma_total(filename:str,coluna ):
+    arquivo_excel = pandas.read_excel(filename,index = False, header= None)
+    coluna_soma = arquivo_excel[coluna]
+    soma_coluna = coluna_soma.sum()
     print(soma_coluna)
-"""
-def topX():
-    arquivo_excel = pandas.read_excel(filename)
 
-"""
+def topx(filename:str, x: int, coluna ):
+    arquivo_excel = pandas.read_excel(filename)
+    ordem_decrescente_x = arquivo_excel.sort_values(index= [:x],coluna, ascending=False) #para tornar em ordem decrescente ascending= False
+    # printar sem o index (primeira coluna que indica os números das linhas).
+    # a função .to_string transforma a váriavel tabular em strings e retira a indexação.
+    #print(ordem_decrescente_x.to_string(index=False))
+    print(ordem_decrescente_x)
