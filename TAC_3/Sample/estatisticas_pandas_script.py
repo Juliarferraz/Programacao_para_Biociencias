@@ -36,7 +36,7 @@ def topx(filename:str, x: int):
     # printar sem o index (primeira coluna que indica os números das linhas).
     print(ordem_decrescente_x.iloc[:x].to_string(index = False),'\t\t')
 
-def cria_coluna(filename):
+def cria_coluna(filename:str):
     # normalização por 100.000 habitantes.
     arquivo_excel = pandas.read_excel(filename)
     pop_normalizada = arquivo_excel['Population'] / 100
