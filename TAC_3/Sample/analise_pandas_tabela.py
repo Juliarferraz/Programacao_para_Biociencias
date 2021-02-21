@@ -21,8 +21,8 @@ def main():
     valor_max(nome_do_arquivo, coluna_max)
     soma_total_coluna = input("Digite o nome da coluna que você deseja calcular a média: ")
     soma_total(nome_do_arquivo, soma_total_coluna)
-    #valor_de_x = input("Digite a quantidade de países com maior número de casos que você deseja visualizar: ")
-    #topx(nome_do_arquivo, valor_de_x)
+    valor_de_x = input("Digite a quantidade de países com maior número de casos que você deseja visualizar: ")
+    topx(nome_do_arquivo, valor_de_x)
     cria_coluna(nome_do_arquivo)
 
 if __name__ == "__main__":

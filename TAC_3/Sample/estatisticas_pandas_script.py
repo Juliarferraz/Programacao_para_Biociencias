@@ -31,7 +31,7 @@ def soma_total(filename:str, coluna:str):
     coluna_soma = arquivo_excel[coluna]
     soma_coluna = coluna_soma.sum()
     print(soma_coluna)
-"""
+
 def topx(filename:str, x: int):
     arquivo_excel = pandas.read_excel(filename)
     ordem_decrescente_x = arquivo_excel.sort_values(by=['Total_cases'], ascending=False) #para tornar em ordem decrescente ascending= False
@@ -39,7 +39,7 @@ def topx(filename:str, x: int):
     # a função .to_string transforma a váriavel tabular em strings e retira a indexação.
     #print(ordem_decrescente_x.to_string(index=False))
     print(ordem_decrescente_x[0:x])
-"""
+
 def cria_coluna(filename):
     # normalização por 100.000 habitantes.
     arquivo_excel = pandas.read_excel(filename)
