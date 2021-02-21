@@ -4,31 +4,31 @@ data: 20/02/2021
 versão: 1
 """
 
-### importações de bibliotecas externas do Python
+# importações de bibliotecas externas do Python
 import pandas
 
 def valor_max(filename:str, coluna:str):
     arquivo_excel = pandas.read_excel(filename)
     coluna_max = arquivo_excel[coluna]
     max_value = coluna_max.max()
-    print(max_value,'\t\t')
+    print('Máximo: {}'.format(max_value),'\t\t')
 def valor_min(filename:str, coluna:str):
     arquivo_excel = pandas.read_excel(filename)
     coluna_min = arquivo_excel[coluna]
     min_value = coluna_min.min()
-    print(min_value,'\t\t')
+    print('Minimo: {} '.format(min_value),'\t\t')
     
 def media(filename:str, coluna:str):
     arquivo_excel = pandas.read_excel(filename)
     coluna_media = arquivo_excel[coluna]
     media = coluna_media.mean()
-    print("Média:", media,'\t\t')
+    print("Média: {} ".format(media),'\t\t')
 
 def soma_total(filename:str, coluna:str):
     arquivo_excel = pandas.read_excel(filename)
     coluna_soma = arquivo_excel[coluna]
     soma_coluna = coluna_soma.sum()
-    print(soma_coluna,'\t\t')
+    print('Soma: {}'.format(soma_coluna),'\t\t')
 
 def topx(filename:str, x: int):
     arquivo_excel = pandas.read_excel(filename)
