@@ -11,7 +11,7 @@ import sys
 from estatisticas_pandas_script import *
 
 def main():
-    nome_do_arquivo = sys.argv[0]
+    nome_do_arquivo = sys.argv[1]
 
     coluna_min = input("Digite o nome da coluna que deseja calcular o valor mínimo: ")
     valor_min(nome_do_arquivo, coluna_min)
@@ -19,10 +19,10 @@ def main():
     media(nome_do_arquivo, coluna_media)
     coluna_max = input("Digite o nome da coluna que deseja calcular o valor máximo: ")
     valor_max(nome_do_arquivo, coluna_max)
-    soma_total_coluna = input("Digite o nome da coluna que você deseja calcular a média ")
+    soma_total_coluna = input("Digite o nome da coluna que você deseja calcular a média: ")
     soma_total(nome_do_arquivo, soma_total_coluna)
-    coluna_e_x = input("Digite o nome da coluna que voce deseja e o valor de x")
-    topx(nome_do_arquivo, (coluna_e_x[2]),(coluna_e_x[1]))
+    #valor_de_x = input("Digite a quantidade de países com maior número de casos que você deseja visualizar: ")
+    #topx(nome_do_arquivo, valor_de_x)
     cria_coluna(nome_do_arquivo)
 
 if __name__ == "__main__":
