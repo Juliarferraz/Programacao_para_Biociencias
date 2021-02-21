@@ -17,6 +17,7 @@ versão: 1
 ### importações de bibliotecas internas do Python.
 ### importações de bibliotecas externas do Python
 import pandas
+import xlrd
 ##para delet
 
 def valor_max(filename:str, coluna):
@@ -49,3 +50,17 @@ def topx(filename:str, x: int, coluna ):
     # a função .to_string transforma a váriavel tabular em strings e retira a indexação.
     #print(ordem_decrescente_x.to_string(index=False))
     print(ordem_decrescente_x)
+
+def cria_coluna(filename:str):
+    #criar coluna chamada “Total_cases_per_100mil”
+    # normalização por 100.000 habitantes.
+    arquivo_excel = pandas.read_excel(filename)
+    # [Population] . 1000/100.000 = [Population]/100
+    pop_normalizada = arquivo_excel['Population'] / 100
+    # calculo da taxa de morte por país.
+    # geração de uma nova coluna na tabela existente.
+    arquivo_excel['Total_cases_per_100mil'] = arquivo_excel['Total deaths'] / pop_normalizada
+    # impressão de apenas duas colunas: Países e a taxa de mortes.
+    # pode-se usar .to_csv também, e utilizar sep='\t' para separar as colunas por tabulação.
+    print(arquivo_excel[['Country', 'Total_cases_per_100mil']].to_string(index=False))
+

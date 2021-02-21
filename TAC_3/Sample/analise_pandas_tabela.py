@@ -7,7 +7,7 @@ versão: 1
 # importações de bibliotecas internas do Python
 import sys
 # importações de bibliotecas externas do Python
-#from pandas import *
+import xlrd
 # importações de seus próprios módulos e pacotes
 from estatisticas_pandas_script import *
 
