@@ -21,12 +21,12 @@ import pandas
 ##para delet
 
 def valor_max(filename:str, coluna):
-    arquivo_excel = pandas.read_excel(filename,index = False, header= None)
+    arquivo_excel = pandas.read_excel(filename, header= None)
     coluna_max = arquivo_excel[coluna]
     max_value = coluna_max.max()
     print(max_value)
 def valor_min(filename:str, coluna):
-    arquivo_excel = pandas.read_excel(filename,index = False, header= None)
+    arquivo_excel = pandas.read_excel(filename, header= None)
     coluna_min = arquivo_excel[coluna]
     min_value = coluna_min.max()
     print(min_value)
@@ -38,7 +38,7 @@ def media(filename:str, coluna):
     print("Média:",media)
 
 def soma_total(filename:str, coluna):
-    arquivo_excel = pandas.read_excel(filename,index = False, header= None)
+    arquivo_excel = pandas.read_excel(filename, header= None)
     coluna_soma = arquivo_excel[coluna]
     soma_coluna = coluna_soma.sum()
     print(soma_coluna)
