@@ -17,8 +17,11 @@ from Bio import SeqIO
 #recebe como entrada na linha de comando:
 codigo_desconhecido = sys.argv[1]
 #abrir arquivo para ser lido
+contador = 0
 for i in SeqIO.parse(open(codigo_desconhecido),"fasta"):
-    nomeArquivo = str("{}.fasta").format(i.id)
+    contador += 1
+    nomeArquivo = str("Sequencia_{}.fasta").format(contador)
     refArquivoSaida = open(nomeArquivo,"w")
     SeqIO.write(i, refArquivoSaida, "fasta")
     refArquivoSaida.close()
+print("Pastas foram criadas com sucesso")
