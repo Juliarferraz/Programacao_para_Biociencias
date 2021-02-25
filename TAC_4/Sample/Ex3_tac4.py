@@ -24,11 +24,9 @@ for i in SeqIO.parse(open(codigo_desconhecido),"fasta"):
     sequencia = nomeArquivo
     ##mudar##
     meuOutput = r"C:\Users\julia\PycharmProjects\Programacao_para_Biociencias\TAC_4\Data\meuOutput.txt"
-    ##mudar##
     refArquivoSaida.close()
     ##mudar##
     blastx_path = r"C:\Program Files\NCBI\blast-2.11.0+\bin\blastx.exe"
-    ##mudar##
 
     linha_de_comando_blastx = NcbiblastxCommandline(cmd=blastx_path, query=sequencia,subject=dataBase, outfmt=6,out=meuOutput, evalue=0.05)
     stdout, stderr = linha_de_comando_blastx()
@@ -71,6 +69,7 @@ for i in SeqIO.parse(open(codigo_desconhecido),"fasta"):
             melhorscore = hit[bitscore]
             Evalue = hit[evalue]
             encontrada = hit[sseqid]
+
             print("Sequência de busca: %s" % i.id)
             print("Sequência encontrada: %s" % encontrada)
             print("Score = %s" % melhorscore)
